@@ -1,29 +1,17 @@
-= autotest-rails
+Autotest for Test::Unit on Rails, including plugins for migrations and fixtures.
 
-* http://rubyforge.org/projects/zentest
+Install
+=======
 
-== DESCRIPTION:
+    sudo gem install autotest autotest-rails-pure
 
-This is an autotest plugin to provide rails support. It provides basic
-rails support and extra plugins for migrations and fixtures.
+TODO
+====
+ - add specs, e.g. which file is loaded when x changes
 
-== FEATURES/PROBLEMS:
 
-* same old plugin you know and love. Just in its own package now.
-
-== SYNOPSIS:
-
-  There is no synopsis. This just works.
-
-== REQUIREMENTS:
-
-* ZenTest for autotest
-
-== INSTALL:
-
-* sudo gem install autotest-rails
-
-== LICENSE:
+LICENSE
+=======
 
 (The MIT License)
 

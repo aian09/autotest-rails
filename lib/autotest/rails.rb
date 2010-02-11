@@ -1,7 +1,7 @@
 require 'autotest'
 
 class Autotest::Rails < Autotest
-  VERSION = '4.1.0'
+  VERSION = File.read( File.join(File.dirname(__FILE__),'..','..','VERSION') ).strip
 
   def initialize # :nodoc:
     super
