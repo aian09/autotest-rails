@@ -71,12 +71,16 @@ class Autotest::Rails < Autotest
     end
   end
 
+  def ignored_namespaces
+    'unit|functional|integration|views|controllers|helpers|cells'
+  end
+
   # Convert the pathname s to the name of class.
   def path_to_classname(s)
     sep = File::SEPARATOR
-    f = s.sub(/^test#{sep}((\w+)#{sep})?/, '').sub(/\.rb$/, '').split(sep)
-    f = f.map { |path| path.split(/_/).map { |seg| seg.capitalize }.join }
-    f = f.map { |path| path =~ /Test$/ ? path : "#{path}Test"  }
-    f.join('::')
+    parts = s.sub(/^test#{sep}((#{ignored_namespaces})#{sep})?/, '').sub(/\.rb$/, '').split(sep)
+    modules = parts.map { |path| path.split(/_/).map { |seg| seg.capitalize }.join }
+    modules = modules.map { |path| path =~ /Test$/ ? path : "#{path}Test"  }
+    modules.join('::')
   end
 end
