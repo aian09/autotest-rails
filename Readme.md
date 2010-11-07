@@ -1,5 +1,9 @@
 Autotest for Test::Unit on Rails, including plugins for migrations and fixtures.
 
+ - independent of ZenTest
+ - added tests
+ - fixed namespace issues
+
 Install
 =======
 
@@ -7,10 +11,15 @@ Install
 
 TODO
 ====
- - add specs, e.g. which file is loaded when x changes
+ - add more tests: e.g. which file is loaded when x changes
+
+Fork-contributors
+=====
+ - [Nick Sutterer](http://nicksda.apotomo.de/)
+ - [Michael Grosser](http://grosser.it)
 
 
-LICENSE
+Original LICENSE
 =======
 
 (The MIT License)
