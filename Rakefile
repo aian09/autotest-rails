@@ -1,3 +1,11 @@
+require 'rubygems'
+require 'rake/testtask'
+
+task :default => :test
+Rake::TestTask.new(:test) do |test|
+  test.test_files = FileList['test/*.rb']
+end
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
