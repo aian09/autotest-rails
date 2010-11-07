@@ -80,7 +80,7 @@ class Autotest::Rails < Autotest
     sep = File::SEPARATOR
     parts = s.sub(/^test#{sep}((#{ignored_namespaces})#{sep})?/, '').sub(/\.rb$/, '').split(sep)
     modules = parts.map { |path| path.split(/_/).map { |seg| seg.capitalize }.join }
-    modules = modules.map { |path| path =~ /Test$/ ? path : "#{path}Test"  }
+    modules[-1] = "#{modules.last}Test" unless modules.last =~ /Test$/
     modules.join('::')
   end
 end

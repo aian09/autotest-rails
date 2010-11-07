@@ -15,11 +15,15 @@ class RailsTest < MiniTest::Unit::TestCase
       end
 
       it "should convert non-default namespaces" do
-        assert_equal "FooTest::PostControllerTest", @at.path_to_classname("test/foo/post_controller_test.rb")
+        assert_equal "Foo::PostControllerTest", @at.path_to_classname("test/foo/post_controller_test.rb")
       end
 
       it "should convert normal namespaces inside ignored namespaces" do
-        assert_equal "BloggingTest::PostControllerTest", @at.path_to_classname("test/controllers/blogging/post_controller_test.rb")
+        assert_equal "Blogging::PostControllerTest", @at.path_to_classname("test/controllers/blogging/post_controller_test.rb")
+      end
+
+      it "does not remove _test namespces" do
+        assert_equal "BloggingTest::PostControllerTest", @at.path_to_classname("test/controllers/blogging_test/post_controller_test.rb")
       end
     end
   end
