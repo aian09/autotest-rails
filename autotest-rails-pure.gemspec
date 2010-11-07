@@ -5,19 +5,16 @@
 
 Gem::Specification.new do |s|
   s.name = %q{autotest-rails-pure}
-  s.version = "4.1.1"
+  s.version = "4.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Davis"]
   s.date = %q{2010-11-07}
-  s.extra_rdoc_files = [
-    "README.markdown"
-  ]
   s.files = [
     ".autotest",
      "History.txt",
-     "README.markdown",
      "Rakefile",
+     "Readme.md",
      "VERSION",
      "autotest-rails-pure.gemspec",
      "lib/autotest/discover.rb",
