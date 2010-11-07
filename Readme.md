@@ -3,6 +3,8 @@ Autotest for Test::Unit on Rails, including plugins for migrations and fixtures.
  - independent of ZenTest
  - added tests
  - fixed namespace issues
+ - support application_controller.rb
+ - lib/foo/bar -> test/unit/foo/bar_test
 
 Install
 =======
